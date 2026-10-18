@@ -1,0 +1,20 @@
+version: balanced-v1
+# 6000 is divisible by 5, 10, 60 and 100, so ratings, 0.1-km
+# distances, and per-minute penalties all remain exact integer CP-SAT terms.
+objective_scale: 6000
+rewards:
+  amap_rating: 1.00
+  preference_match: 1.50
+  representativeness: 1.20
+  category_diversity: 0.50
+  daily_target_fill: 0.80
+  meal_scene_match: 0.75
+penalties:
+  distance_per_km: 0.12
+  preferred_period_miss: 0.60
+  meal_scene_miss: 0.50
+  weather_mismatch: 1.00
+  consecutive_high_fatigue: 0.50
+  cross_cluster_arc: 0.35
+  waiting_per_hour: 0.25
+  daily_load_imbalance_per_hour: 0.30

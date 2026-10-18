@@ -1,0 +1,15 @@
+.git
+.env
+.env.*
+!.env.example
+node_modules
+**/node_modules
+__pycache__
+**/__pycache__
+.venv
+data
+.local
+.scratch
+tests
+assets
+README.md

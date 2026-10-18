@@ -1,0 +1,57 @@
+/* Qingwan shared typography and homepage surfaces. No layout or sizing overrides. */
+html[data-theme] :is(h1,h2,h3,h4,.brand-name,.rd-brand strong,.dashboard-plan-info strong,.dashboard-inspirations strong,.dashboard-weekend-card strong) { font-weight:600!important; }
+html[data-theme] :is(.topnav-link,.rd-day-tabs button strong,.rd-detail-title button,.rd-suggestions button) { font-weight:500!important; }
+html[data-theme] .topbar { background:var(--card); color:var(--ink); box-shadow:0 1px 0 var(--line); }
+html[data-theme] .theme-switcher { background:var(--card-2); color:var(--accent-deep); box-shadow:none; }
+html[data-theme] .theme-seg.active { background:var(--accent-soft); color:var(--accent-deep); }
+html[data-theme] .theme-seg:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+
+html[data-theme] .app-shell.page-home {
+  --ft-primary:var(--accent); --ft-primary-hover:var(--accent-deep); --ft-primary-soft:var(--accent-soft);
+  --ft-green:var(--second); --ft-green-soft:var(--second-soft); --ft-brown:var(--ink);
+  --ft-brown-muted:var(--ink-3); --ft-cream:var(--bg); --ft-text:var(--ink); --ft-text-muted:var(--ink-3);
+  background:var(--bg);
+}
+html[data-theme] .app-shell.page-home .dashboard-page { background:var(--bg); color:var(--ink); }
+html[data-theme] .app-shell.page-home .topbar { background:var(--card); box-shadow:0 1px 0 var(--line); }
+html[data-theme] .app-shell.page-home .brand-name { color:var(--ink); }
+html[data-theme] .app-shell.page-home .topnav-link { color:var(--ink-3); }
+html[data-theme] .app-shell.page-home .topnav-link.active,
+html[data-theme] .app-shell.page-home .topnav-link:hover { color:var(--accent-deep); }
+html[data-theme] .app-shell.page-home .topnav-link.active::after { background:var(--accent); box-shadow:none; }
+html[data-theme] .app-shell.page-home .theme-switcher { background:var(--card-2); color:var(--accent-deep); box-shadow:none; }
+html[data-theme] .app-shell.page-home .user-login-btn { background:var(--accent); color:var(--accent-ink); border-radius:10px; box-shadow:none; }
+html[data-theme] .app-shell.page-home .scenery-hero h1 { font-weight:600!important; letter-spacing:.04em; }
+html[data-theme] .app-shell.page-home .dashboard-hero h1 { color:var(--ink); text-shadow:none; }
+html[data-theme] .app-shell.page-home .dashboard-hero p { color:var(--ink-3); }
+html[data-theme] .app-shell.page-home .dashboard-composer { background:var(--card); color:var(--ink); border-color:var(--line); border-radius:16px; box-shadow:var(--sh-sm); }
+html[data-theme] .app-shell.page-home .dashboard-composer textarea { color:var(--ink); }
+html[data-theme] .app-shell.page-home .dashboard-composer textarea::placeholder { color:var(--ink-3); }
+html[data-theme] .app-shell.page-home .dashboard-style-chips button { background:var(--card-2); color:var(--accent-deep); box-shadow:none; font-weight:500; }
+html[data-theme] .app-shell.page-home .dashboard-style-chips button:hover { background:var(--accent-soft); color:var(--accent-deep); }
+html[data-theme] .app-shell.page-home .dashboard-send,
+html[data-theme] .app-shell.page-home .dashboard-send:hover { background:var(--accent); color:var(--accent-ink); border-radius:10px; box-shadow:none; font-weight:500; }
+html[data-theme] .app-shell.page-home .dashboard-cities strong { color:var(--ink); font-weight:500; }
+html[data-theme] .app-shell.page-home .dashboard-cities button { color:var(--ink-3); }
+html[data-theme] .app-shell.page-home .dashboard-cities button:hover { color:var(--accent-deep); background:var(--accent-soft); }
+html[data-theme] .app-shell.page-home .dashboard-section-head h2 { color:var(--ink); }
+html[data-theme] .app-shell.page-home .dashboard-section-head h2::before,
+html[data-theme] .app-shell.page-home .dashboard-cities strong::before { color:var(--second); }
+html[data-theme] .app-shell.page-home .dashboard-section-head>button,
+html[data-theme] .app-shell.page-home .dashboard-plan-actions>button,
+html[data-theme] .app-shell.page-home .dashboard-plans-more button,
+html[data-theme] .app-shell.page-home .dashboard-plan-error button { background:var(--card); color:var(--ink); border-color:var(--line); }
+html[data-theme] .app-shell.page-home .dashboard-plan-card { background:var(--card); color:var(--ink); border-color:var(--line); box-shadow:var(--sh-sm); }
+html[data-theme] .app-shell.page-home .dashboard-plan-card:hover { box-shadow:var(--sh-md); }
+html[data-theme] .app-shell.page-home .dashboard-plan-image { background:var(--bg-deep); }
+html[data-theme] .app-shell.page-home .dashboard-plans-more { color:var(--ink-3); }
+html[data-theme] .app-shell.page-home .dashboard-plan-info :is(strong,h2) { color:var(--ink); }
+html[data-theme] .app-shell.page-home .dashboard-plan-info :is(small,em) { color:var(--ink-3); }
+html[data-theme] .app-shell.page-home .dashboard-plan-info i { color:var(--accent-deep); }
+html[data-theme] .app-shell.page-home .dashboard-weekend-card { background:var(--card); border-color:var(--line); box-shadow:var(--sh-sm); }
+html[data-theme] .app-shell.page-home .dashboard-weekend-card :is(strong,h2) { color:var(--ink); }
+html[data-theme] .app-shell.page-home .dashboard-weekend-card :is(span:not(.dashboard-weekend-city),small) { color:var(--ink-3); }
+html[data-theme] .app-shell.page-home .dashboard-weekend-city { color:var(--accent-deep); }
+html[data-theme] .app-shell.page-home .dashboard-weekend-card :is(i,em) { color:var(--accent-deep); }
+html[data-theme] .app-shell.page-home .dashboard-inspirations button { background:var(--card); color:var(--ink); border-color:var(--line); border-radius:16px; box-shadow:var(--sh-sm); }
+html[data-theme] .app-shell.page-home .dashboard-inspirations b { background:var(--card-2); color:var(--accent-deep); }

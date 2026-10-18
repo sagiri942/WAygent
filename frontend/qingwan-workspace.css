@@ -1,0 +1,37 @@
+/* Qingwan task 02: workspace, profile and account surfaces only. */
+html[data-theme] .app-shell:not(.page-home) .topnav-link.active { background:var(--accent-soft); color:var(--accent-deep); }
+html[data-theme] .user-login-btn { background:var(--accent); color:var(--accent-ink); border-radius:10px; box-shadow:none; }
+html[data-theme] .user-dropdown { background:var(--card); color:var(--ink); border-color:var(--line); box-shadow:var(--sh-lg); }
+
+html[data-theme] .app-shell.page-chat .chat-shell { background:var(--bg); }
+html[data-theme] .workspace-shell .chat-sidebar { background:var(--card); }
+html[data-theme] .workspace-shell .chat-sidebar-head button { background:var(--accent); color:var(--accent-ink); box-shadow:var(--sh-sm); }
+html[data-theme] .workspace-shell .conversation-item { background:var(--card); border-color:var(--line); box-shadow:var(--sh-sm); }
+html[data-theme] .workspace-shell .conversation-item:hover,
+html[data-theme] .workspace-shell .conversation-item.active { background:var(--card-2); border-color:var(--accent); }
+html[data-theme] .workspace-shell .conversation-attention.waiting-user { box-shadow:var(--sh-sm); }
+html[data-theme] .workspace-shell .chat-bubble { background:var(--card); color:var(--ink); border-color:var(--line); box-shadow:var(--sh-sm); }
+html[data-theme] .workspace-shell .chat-message.user .chat-bubble { background:var(--accent-soft); color:var(--ink); border-color:var(--line); }
+html[data-theme] .workspace-shell .chat-message.user .chat-avatar { background:var(--accent-soft); color:var(--accent-deep); }
+html[data-theme] .workspace-shell .chat-composer { background:var(--card); border-color:var(--line); border-radius:16px; box-shadow:var(--sh-sm); }
+html[data-theme] .workspace-shell .chat-composer:focus-within { border-color:var(--focus); box-shadow:var(--sh-sm); }
+html[data-theme] .workspace-shell .chat-composer textarea::placeholder { color:var(--ink-3); }
+html[data-theme] .workspace-shell .composer-send:not(.is-stop) { background:var(--accent); color:var(--accent-ink); }
+html[data-theme] .workspace-shell .chat-thinking-body { background:var(--card-2); box-shadow:var(--sh-sm); }
+html[data-theme] .workspace-shell :is(.planning-thought,.brief-confirmation,.active-run-rail button,.archived-conversation-note) { box-shadow:var(--sh-sm); }
+html[data-theme] .workspace-shell :is(.brief-confirmation-submit,.planning-thought-action,.planning-thought-actions .is-primary,.final-itinerary-actions button,.change-decision button:not(.quiet)) { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+html[data-theme] .workspace-shell .chat-empty-prompts button { background:var(--card); border-color:var(--line); box-shadow:var(--sh-sm); }
+html[data-theme] .workspace-shell .chat-empty-prompts button:hover { box-shadow:var(--sh-md); border-color:var(--accent); }
+html[data-theme] .workspace-shell .first-journey-orbit { box-shadow:inset 0 0 0 1px var(--line),var(--sh-sm); }
+
+html[data-theme] .app-shell.page-profile :is(.profile-aside,.memory-add-card,.memory-fact-card) { background:var(--card); border-color:var(--line); box-shadow:var(--sh-sm); }
+html[data-theme] .app-shell.page-profile .candidate-section { background:var(--second-soft); }
+html[data-theme] .app-shell.page-profile .memory-fact-card:hover { box-shadow:var(--sh-md); }
+html[data-theme] .app-shell.page-profile .memory-approve { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+
+/* Scope to the existing authentication modal; itinerary dialogs are task 03. */
+html[data-theme] .modal-backdrop:has(.auth-tabs) { background:color-mix(in srgb,var(--bg-deep) 45%,transparent); }
+html[data-theme] .modal-card:has(.auth-tabs) { background:var(--card); color:var(--ink); box-shadow:var(--sh-lg); }
+html[data-theme] .modal-card:has(.auth-tabs) .modal-title { font-weight:600; }
+html[data-theme] .modal-card:has(.auth-tabs) .form-submit { background:var(--accent); color:var(--accent-ink); border-radius:10px; }
+html[data-theme] .modal-card:has(.auth-tabs) .form-input::placeholder { color:var(--ink-3); }

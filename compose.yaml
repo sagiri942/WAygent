@@ -1,0 +1,80 @@
+services:
+  app:
+    build: .
+    init: true
+    restart: unless-stopped
+    ports:
+      - "${WAYGENT_HTTP_PORT:-8765}:8765"
+    environment:
+      WAYGENT_STORAGE_MODE: mysql
+      WAYGENT_MYSQL_DSN: mysql+pymysql://waygent:${MYSQL_PASSWORD:-waygent-demo-change-me}@mysql:3306/waygent_business
+      WAYGENT_CHECKPOINT_DSN: mysql://waygent:${MYSQL_PASSWORD:-waygent-demo-change-me}@mysql:3306/waygent_checkpoints
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET: ${JWT_SECRET:-}
+      LLM_PROVIDER: ${LLM_PROVIDER:-deepseek}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+      DEEPSEEK_BASE_URL: ${DEEPSEEK_BASE_URL:-https://api.deepseek.com}
+      DEEPSEEK_MODEL: ${DEEPSEEK_MODEL:-deepseek-v4-flash}
+      DEEPSEEK_HTTP_PROXY: ${DEEPSEEK_HTTP_PROXY:-}
+      DOUBAO_API_KEY: ${DOUBAO_API_KEY:-}
+      DOUBAO_MODEL: ${DOUBAO_MODEL:-}
+      MAIN_AGENT_MODEL: ${MAIN_AGENT_MODEL:-}
+      PLANNING_AGENT_MODEL: ${PLANNING_AGENT_MODEL:-}
+      PLANNING_CANDIDATE_MODEL: ${PLANNING_CANDIDATE_MODEL:-}
+      PLANNING_SPOT_TIPS_MODEL: ${PLANNING_SPOT_TIPS_MODEL:-}
+      CHAT_SUMMARY_MODEL: ${CHAT_SUMMARY_MODEL:-}
+      MEMORY_EXTRACTION_MODEL: ${MEMORY_EXTRACTION_MODEL:-}
+      PLANNING_MEMORY_MATCH_MODEL: ${PLANNING_MEMORY_MATCH_MODEL:-}
+      AMAP_API_KEY: ${AMAP_API_KEY:-}
+      AMAP_JS_KEY: ${AMAP_JS_KEY:-}
+      AMAP_JS_SECURITY_CODE: ${AMAP_JS_SECURITY_CODE:-}
+      RUNTIME_CHAT_CONCURRENCY: ${RUNTIME_CHAT_CONCURRENCY:-8}
+      RUNTIME_PLANNING_CONCURRENCY: ${RUNTIME_PLANNING_CONCURRENCY:-2}
+      RUNTIME_PLANNING_PER_USER: ${RUNTIME_PLANNING_PER_USER:-2}
+      RUNTIME_LLM_CONCURRENCY: ${RUNTIME_LLM_CONCURRENCY:-8}
+      RUNTIME_AMAP_CONCURRENCY: ${RUNTIME_AMAP_CONCURRENCY:-8}
+      RUNTIME_REVISION_TIMEOUT_SECONDS: ${RUNTIME_REVISION_TIMEOUT_SECONDS:-300}
+    volumes:
+      - app-data:/app/data
+    depends_on:
+      mysql: {condition: service_healthy}
+      redis: {condition: service_healthy}
+    stop_grace_period: 35s
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8765/api/ready', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 90s
+  mysql:
+    image: mysql:8.4.11
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: waygent_business
+      MYSQL_USER: waygent
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-waygent-demo-change-me}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-waygent-root-change-me}
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_0900_bin"]
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./deploy/mysql-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+volumes:
+  app-data:
+  mysql-data:
+  redis-data:

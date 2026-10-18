@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="小way背包机器人">
+<g stroke="#203A3A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect x="80" y="61" width="27" height="45" rx="10" fill="#DCA18B"/>
+<rect x="32" y="64" width="54" height="46" rx="14" fill="#E7F2EF"/>
+<path d="M42 68v30m32-30v30" stroke="#DCA18B"/>
+<path d="M60 24V12"/><circle cx="60" cy="9" r="5" fill="#DCA18B"/>
+<rect x="22" y="25" width="76" height="53" rx="20" fill="#A3D4C9"/>
+<rect x="31" y="34" width="58" height="34" rx="13" fill="#FFFFFF"/>
+<path d="M45 44v7m30-7v7M53 57q7 6 14 0" fill="none"/>
+</g></svg>

@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+node_modules/
+data/
+.local/
+.scratch/
+*.db
+*.sqlite*
+*.log
+.DS_Store
+.codegraph/
+.codex/
+.agents/

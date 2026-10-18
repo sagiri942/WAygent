@@ -1,0 +1,25 @@
+{
+  "sources": {
+    "api.js": "fe6fe1f043e7e7a21ed3372f249a601dafad1d8c9f29d50cd7dfd9a206e34490",
+    "chat-state.js": "75eb363382dab91bdbc809baedb03d525304ce17da318c1be6d5145221d6eac0",
+    "navigation-state.js": "272b59ad4bf18a37654146a6d5ee391b9ab239b298d843a9f7e7e9686290c83f",
+    "tweaks-panel.jsx": "a4d1b025b7be425c6c1ee6af66a86f783c4f2251a1d247e9dd06e7da0cd44022",
+    "mascot.jsx": "5de8ebc644a544c3aa101455fa9eac0462c43e174ccdd275a460b957def98a60",
+    "components.jsx": "831dbe9981ec92577528d46859c2b49bf59f9daa69bca9072868c9db536dd3cb",
+    "edit.jsx": "28b29bf6e40779f201856c76416d0efff8d8ea5c04839ff5976d9f5b0e1a9a14",
+    "pages.jsx": "e72c9454ee9106ba2d623437693242f4a20c4469e3b7a351ecddac28454d1740",
+    "detail-redesign.jsx": "9357fbdc006293bb1f3fa3afac435dcf58568381a12379fadf3f8bf8eca0a230",
+    "main.jsx": "efa8233bea7d1fe903001d95420ca9b49adb8c88d8521c7d245cbc64ac4771b4"
+  },
+  "files": {
+    "app.js": "0a0b173f62cf3d3cad0bfa1813751513723b7d99f2aabea5d7f47c6d5fa81d76",
+    "react.js": "d949f1c3687aedadcedac85261865f29b17cd273997e7f6b2bfc53b2f9d4c4dd",
+    "react-dom.js": "35f4f974f4b2bcd44da73963347f8952e341f83909e4498227d4e26b98f66f0d",
+    "sortable.js": "6d0a831fc19b4bae851797ad3393157e861afb7862459c11226359b27e2c4337",
+    "gsap.js": "28033e449a31ebcc396e5be8b13b63152bf03094288fb5867034321927bce087",
+    "react-LICENSE.txt": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+    "react-dom-LICENSE.txt": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+    "sortable-LICENSE.txt": "e94dfc31e800d169257569db270457c9f028440c9ccae41e7eb78b2db18f1298",
+    "gsap-package.json": "c99c1558dd3c2ec1193a4c3b53bab001643e8189b17e0a57976735eea83b9885"
+  }
+}

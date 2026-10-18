@@ -1,0 +1,103 @@
+/* Qingwan task 03: visual tokens only; retain accepted detail geometry. */
+html[data-theme] { --map-meal-ink:#203A3A; }
+html[data-theme] .rd-app { --rd-paper:var(--bg); --rd-card:var(--card); --rd-ink:var(--ink); --rd-muted:var(--ink-3); --rd-line:var(--line); --rd-accent:var(--second); --rd-sage:var(--accent-deep); }
+html[data-theme] .rd-page :is(.rd-chat-panel,.rd-workspace) { background:var(--bg); }
+html[data-theme] .rd-page .rd-top-nav { box-shadow:0 1px 0 var(--line); }
+html[data-theme] .rd-page :is(.rd-brand strong,.rd-studio,.rd-detail-title h2,.rd-route-column h3,.rd-stop-copy h4,.rd-profile h2,.rd-profile h4) { color:var(--ink); text-shadow:none; }
+html[data-theme] .rd-page :is(.rd-brand>span,.rd-nav-actions>button) { background:var(--card-2); color:var(--accent-deep); border-color:var(--line); }
+html[data-theme] .rd-page .rd-nav-actions .rd-avatar { background:var(--accent); color:var(--accent-ink); }
+html[data-theme] .rd-page :is(.rd-breadcrumb b,.rd-breadcrumb span,.rd-breadcrumb em,.rd-conversation-label em,.rd-chat-footer,.rd-chat-footer em,.rd-stop time,.rd-stop time strong,.rd-stop time span,.rd-stop-meta small,.rd-gallery-status,.rd-photo-status,.rd-route-end small) { color:var(--ink-3); }
+html[data-theme] .rd-page :is(.rd-breadcrumb button,.rd-chat-footer span,.rd-candidate-title button) { color:var(--accent-deep); }
+html[data-theme] .rd-page :is(.rd-conversation-label span,.rd-detail-title small,.rd-route-column>header small,.rd-stop-meta span,.rd-gallery h3,.rd-gallery-column h4,.rd-history-drawer header small,.rd-profile header small) { color:var(--second); }
+html[data-theme] .rd-page :is(.rd-chat-actions button,.rd-detail-title button,.rd-suggestions button,.rd-transfer button,.rd-day-tabs,.rd-profile-id,.rd-profile-tags span) { background:var(--card-2); color:var(--ink-2); border-color:var(--line); box-shadow:none; }
+html[data-theme] .rd-page :is(.rd-message p,.rd-stop-card,.rd-photo-carousel,.rd-profile-note,.rd-history-drawer,.rd-profile,.rd-detail-panel) { background:var(--card); color:var(--ink); border-color:var(--line); box-shadow:var(--sh-sm); }
+html[data-theme] .rd-page :is(.rd-message.user p,.rd-stop.is-selected .rd-stop-card) { background:var(--card-2); color:var(--ink); }
+html[data-theme] .rd-page .rd-stop:hover .rd-stop-card { background:var(--card-2); border-color:var(--line); box-shadow:var(--sh-sm); }
+html[data-theme] .rd-page :is(.rd-message small,.rd-message em,.rd-stop-chevron,.rd-route-end strong,.rd-profile p,.rd-profile-id em) { color:var(--ink-3); }
+html[data-theme] .rd-page .rd-ai-avatar { background:var(--accent-soft); color:var(--accent-deep); }
+html[data-theme] .rd-page :is(.rd-chat-footer i,.rd-timeline-line,.rd-route-end>span) { background:var(--line); box-shadow:none; }
+html[data-theme] .rd-page :is(.rd-stop-node,.rd-stop.is-selected .rd-stop-node,.rd-day-tabs button[aria-selected=true]) { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+html[data-theme] .rd-page .rd-day-tabs button>span { color:inherit; }
+html[data-theme] .rd-page .rd-stop-icon { background:var(--card-2); color:var(--accent-deep); }
+html[data-theme] .rd-page :is(.rd-composer,.rd-detail-panel,.rd-history-drawer,.rd-profile) { border-radius:16px; box-shadow:var(--sh-sm); }
+html[data-theme] .rd-page .rd-composer { background:var(--card); border-color:var(--line); }
+html[data-theme] .rd-page .rd-composer textarea { color:var(--ink); }
+html[data-theme] .rd-page .rd-composer textarea::placeholder { color:var(--ink-3); }
+html[data-theme] .rd-page .rd-composer footer { color:var(--ink-3); }
+html[data-theme] .rd-page :is(.rd-detail-title button.primary,.rd-composer footer button) { background:var(--accent); color:var(--accent-ink); box-shadow:none; border-radius:10px; }
+html[data-theme] .rd-page :is(.rd-detail-panel::before,.rd-map-column::after) { background:none; }
+html[data-theme] .rd-page :is(.rd-gallery,.rd-media-column,.rd-map-column,.rd-detail-title,.rd-route-column>header,.rd-map-card>div) { border-color:var(--line); }
+html[data-theme] .rd-page :is(.rd-gallery,.rd-map-column,.rd-map-column .map-frame,.rd-map-column .map-stage) { background:var(--card); }
+html[data-theme] .rd-page :is(.rd-map-column .map-head,.rd-map-column .map-legend,.rd-map-column .detail-map-controls,.rd-photo-navigation,.rd-map-card) { background:var(--card-2); color:var(--ink-2); border-color:var(--line); box-shadow:none; }
+html[data-theme] .rd-page :is(.rd-map-column .detail-map-controls button,.rd-photo-navigation button) { background:var(--card); color:var(--ink); box-shadow:none; }
+html[data-theme] .rd-page :is(.rd-photo-carousel figcaption,.rd-map-card>strong) { color:var(--ink); }
+html[data-theme] .rd-page :is(.rd-map-card>span,.rd-map-card>div,.rd-photo-navigation span,.rd-map-column .map-head .mh-note) { color:var(--ink-3); }
+html[data-theme] .rd-page .rd-run-card { background:var(--card-2); color:var(--ink); border-color:var(--line); }
+html[data-theme] .rd-page .rd-run-card.failed { background:var(--danger-soft); border-color:var(--danger); color:var(--danger); }
+html[data-theme] .rd-page .rd-run-card button { color:var(--danger); }
+html[data-theme] .rd-page .rd-spinner { border-color:var(--line); border-top-color:var(--accent); }
+html[data-theme] .rd-page .rd-chat-status { color:var(--ink-3); }
+html[data-theme] .rd-page .rd-chat-status.error { color:var(--danger); }
+html[data-theme] .rd-page .rd-profile-backdrop { background:rgb(14 27 27 / 45%); }
+html[data-theme] .rd-page .rd-profile { box-shadow:var(--sh-lg); }
+html[data-theme] .rd-page .rd-profile-id>span { background:var(--accent); color:var(--accent-ink); }
+html[data-theme] .rd-page .rd-toast { background:var(--card); color:var(--ink); border-color:var(--line); box-shadow:var(--sh-md); }
+
+/* Existing manual editor and its dialogs, including honest SDK failure states. */
+html[data-theme] .detail-workspace { background:var(--bg); }
+html[data-theme] :is(.detail-chat-canvas,.detail-chat-header,.detail-chat-context) { background:var(--bg); color:var(--ink); border-color:var(--line); }
+html[data-theme] .detail-light-rays { opacity:0; }
+html[data-theme] :is(.detail-chat-title strong,.detail-day-overview strong,.detail-more-panel summary,.edit-card-title) { color:var(--ink); }
+html[data-theme] :is(.detail-chat-title small,.detail-chat-message small,.detail-chat-message em,.detail-chat-time,.detail-chat-context,.detail-day-overview p,.detail-composer textarea::placeholder,.detail-composer-footer>em) { color:var(--ink-3); }
+html[data-theme] :is(.detail-chat-actions button,.detail-chat-context>span,.detail-quick-row button,.detail-chat-back,.detail-composer-footer>button,.detail-composer-footer>span,.detail-route-badge) { background:var(--card-2); color:var(--ink-2); border-color:var(--line); }
+html[data-theme] :is(.detail-chat-message p,.detail-composer,.detail-history-popover,.detail-itinerary-sheet,.edit-card) { background:var(--card); color:var(--ink); border-color:var(--line); box-shadow:var(--sh-sm); }
+html[data-theme] .detail-chat-message.user p { background:var(--card-2); color:var(--ink); }
+html[data-theme] :is(.detail-ai-note,.detail-edit-notice,.detail-route-summary section) { background:var(--card-2); color:var(--ink-2); border-color:var(--line); }
+html[data-theme] .detail-composer textarea { color:var(--ink); }
+html[data-theme] .detail-composer-footer>button.send { background:var(--accent); color:var(--accent-ink); }
+html[data-theme] :is(.detail-day-tabs,.detail-day-tabs button) { background:var(--card-2); color:var(--ink-3); border-color:var(--line); box-shadow:none; }
+html[data-theme] .detail-day-tabs button.active { background:var(--accent); color:var(--accent-ink); }
+html[data-theme] :is(.detail-run-card,.detail-map-status) { background:var(--card-2); color:var(--ink-2); border-color:var(--line); }
+html[data-theme] .detail-run-card.failed { background:var(--danger-soft); color:var(--danger); border-color:var(--danger); }
+html[data-theme] .detail-share-notice { background:var(--card); color:var(--ink); box-shadow:var(--sh-md); }
+html[data-theme] :is(.edit-card.is-meal .meal-flag,.meal-flag) { background:var(--second-soft); color:var(--second-ink); }
+html[data-theme] .modal-card:not(:has(.auth-tabs)) { background:var(--card); color:var(--ink); box-shadow:var(--sh-lg); }
+html[data-theme] .modal-backdrop:not(:has(.auth-tabs)) { background:rgb(14 27 27 / 45%); }
+html[data-theme] :is(.go-btn,.edit-tool.primary) { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+html[data-theme] .poi-search-card .modal-title { font-weight:600; }
+html[data-theme] :is(.poi-result,.nearby-item) { background:var(--card); color:var(--ink); border-color:var(--line); }
+html[data-theme] :is(.poi-result:hover,.nearby-item:hover) { background:var(--card-2); border-color:var(--accent); }
+html[data-theme] :is(.form-input::placeholder,.time-edit input::placeholder) { color:var(--ink-3); }
+html[data-theme] .amap-info-content { background:var(--card); color:var(--ink); border-color:var(--line); box-shadow:var(--sh-md); }
+
+html[data-theme] .detail-day-view { --day-color:var(--accent)!important; }
+html[data-theme] :is(.detail-chat-avatar,.detail-route-summary .detail-chat-avatar) { background:var(--accent-soft); color:var(--accent-deep); box-shadow:none; }
+html[data-theme] :is(.detail-ai-note b,.detail-chat-context>em,.detail-route-badge i,.detail-chat-title small i) { color:var(--accent-deep); }
+html[data-theme] .detail-sheet-resizer span { background:var(--ink-3); box-shadow:var(--sh-sm); }
+html[data-theme] :is(.detail-sheet-header,.detail-sheet-content) { background:var(--card); border-color:var(--line); }
+html[data-theme] :is(.detail-sheet-toggle,.detail-more-actions button) { background:var(--card-2); color:var(--ink-2); border-color:var(--line); }
+
+html[data-theme] .detail-composer { --detail-composer-trail:var(--accent); }
+html[data-theme] .detail-composer:focus-within { border-color:var(--focus); box-shadow:var(--sh-sm); }
+html[data-theme] :is(.detail-quick-row button:hover,.detail-day-tabs button:hover) { color:var(--accent-deep); border-color:var(--accent); }
+html[data-theme] .detail-ai-note>span { color:var(--ink-3); }
+html[data-theme] .detail-ai-note>b i { background:var(--success); }
+
+html[data-theme] .detail-fluid-tabs { background:var(--card-2); border-color:var(--line); box-shadow:var(--sh-sm); }
+html[data-theme] .detail-fluid-indicator { background:var(--accent); border-color:var(--accent); box-shadow:var(--sh-sm); }
+html[data-theme] .detail-day-tabs,html[data-theme] .detail-day-tabs button { background:transparent; }
+html[data-theme] .detail-day-tabs button.active { background:transparent; color:var(--accent-ink); }
+html[data-theme] .detail-day-tabs button:focus-visible { box-shadow:0 0 0 2px var(--card),0 0 0 4px var(--focus); }
+html[data-theme] .detail-map-controls { background:var(--card-2); border-color:var(--line); box-shadow:var(--sh-sm); }
+html[data-theme] .detail-map-controls button { background:var(--card); color:var(--ink); }
+
+html[data-theme] .detail-workspace { --detail-blue:var(--accent); --detail-blue-deep:var(--accent-deep); }
+html[data-theme] :is(.detail-weather-card,.detail-ai-badge) { background:var(--card); color:var(--ink); border-color:var(--line); box-shadow:var(--sh-sm); }
+html[data-theme] .detail-weather-card :is(strong,b) { color:var(--ink); }
+html[data-theme] .detail-weather-card :is(small,span,p,em) { color:var(--ink-3); }
+html[data-theme] .rd-page .rd-run-card :is(b,p) { color:var(--ink); }
+html[data-theme] .rd-page .rd-run-card.failed :is(b,p) { color:var(--danger); }
+html[data-theme] .detail-run-card header { color:var(--ink); }
+html[data-theme] .detail-run-card.failed header { color:var(--danger); }
+html[data-theme] .detail-shift-tabs button>span { background:var(--card-2); color:var(--ink-2); border-color:var(--line); box-shadow:var(--sh-sm); }
+html[data-theme] .detail-chat-message p b { color:var(--ink); }
